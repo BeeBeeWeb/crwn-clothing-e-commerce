@@ -66,3 +66,28 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+---
+#### Initial Heroku Command
+`heroku create crown-clothing --buildpack https://github.com/mars/create-react-app-buildpack`
+
+---
+#### deploy to heroku server
+`git push heroku master`
+
+---
+### Get info about dyno
+`heroku ps`
+
+>Free dyno hours quota remaining this month: 550h 0m (100%)
+Free dyno usage for this app: 0h 0m (0%)
+For more information on dyno sleeping and how to upgrade, see:
+https://devcenter.heroku.com/articles/dyno-sleeping
+
+> === web (Free): bin/boot (1)
+web.1: starting 2021/02/20 18:03:06 +0530 (~ 9s ago)
+
+---
+
+### To SSH into heroku dyno (i.e server)
+`heroku ps:exec`
