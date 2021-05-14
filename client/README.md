@@ -75,6 +75,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 #### deploy to heroku server
 `git push heroku master`
 
+use `--force` to overwrite conflicts
+
 ---
 ### Get info about dyno
 `heroku ps`
@@ -106,5 +108,13 @@ replace `<app-name>` by name of the app you get by running command `heroku apps`
 
 ### Remove buildpack
 `heroku buildpacks:remove <buildpack_name>`
+
+### set heroku environment variables
+`heroku config:set STRIPE_SECRET_KEY=`
+
+paste the secret key after `=` without quotes.
+
+### Open heroku app into browser
+`heroku open`
 
 
