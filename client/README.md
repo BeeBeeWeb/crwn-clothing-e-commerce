@@ -91,3 +91,20 @@ web.1: starting 2021/02/20 18:03:06 +0530 (~ 9s ago)
 
 ### To SSH into heroku dyno (i.e server)
 `heroku ps:exec`
+
+
+### List heroku apps
+`heroku apps`
+
+### Link project to existing heroku app
+`heroku git:remote -a <app-name>`
+
+replace `<app-name>` by name of the app you get by running command `heroku apps`
+
+### List names of build packs
+`heroku buildpacks`
+
+### Remove buildpack
+`heroku buildpacks:remove <buildpack_name>`
+
+
