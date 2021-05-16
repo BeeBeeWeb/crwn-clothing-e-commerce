@@ -39,3 +39,13 @@ export const subtractItemFromCart = (cartItems, cartItemToSubtract) => {
     // else return the cart items by clearing item from cartItems
     return [...clearItemFromCart(cartItems, cartItemToSubtract)];
 }
+
+export const getCartItemsCount = cartItems => {
+    return cartItems.reduce((accumulatedQuantity, item) => accumulatedQuantity + item.quantity, 0);
+};
+
+export const getCartTotal = cartItems => {
+    return cartItems.reduce((accumulatedTotal, item) => {
+        return accumulatedTotal + (item.quantity * item.price)
+    }, 0);
+}
