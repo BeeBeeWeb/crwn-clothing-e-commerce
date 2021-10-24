@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
-import './App.css';
+import { GlobalStyle } from './global.styles';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions'
@@ -42,6 +42,7 @@ const App = ({ setCurrentUser, currentUser }) => {
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage}></Route>
